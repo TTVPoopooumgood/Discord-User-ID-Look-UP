@@ -33,7 +33,7 @@ const data = Array.from(cmd, ([name, value]) => value).map((c) => ({
 (async () => {
     try {
         await rest.put(
-            Routes.applicationCommands("959574471159721994"),
+            Routes.applicationCommands(config.client_id),
             {body: data}
         )
         
