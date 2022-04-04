@@ -1,5 +1,6 @@
 const { default: axios } = require("axios");
 const { MessageEmbed } = require("discord.js");
+const config = require("../config.json")
 
 module.exports = {
     name: "lookup",
@@ -24,7 +25,7 @@ module.exports = {
         axios.get(`https://discord.com/api/users/${user_ID}`, {
             method: "GET",
             headers: {
-                "Authorization": `Bot OTU5NTc0NDcxMTU5NzIxOTk0.Ykd3XQ.Nl-1nIJH4L5lOyBlECQ2q8KQdbo`
+                "Authorization": `Bot ${config.client_token}`
             }
         }).then(res => {
             
