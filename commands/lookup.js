@@ -22,7 +22,7 @@ module.exports = {
             return;
         }
 
-        axios.get(`https://discord.com/api/users/${user_ID}`, {
+        axios.get(`https://api.kirka.io/api/Users/${user_ID}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bot ${config.client_token}`
